@@ -36,7 +36,7 @@ class Playlist extends Component {
         <span>
         <span  className="songNumber">{song.id}.</span><span>{song.title}</span>
         </span>
-
+        <span className="dots"></span>
         <span className="right">{secondsToMinutes(song.time)}</span>
       </li>
     )
