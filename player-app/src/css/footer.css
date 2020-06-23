@@ -2,6 +2,9 @@
   border: 1px solid black;
   height: 89px;
   display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 
 }
 .icon {

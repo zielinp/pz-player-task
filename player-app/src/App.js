@@ -5,6 +5,8 @@ import Playlist from './components/Playlist';
 import Main from './components/Main';
 import More from './components/More';
 import Footer from './components/Footer';
+import SimpleSlider from './components/SimpleSlider';
+import ProgressBarMusic from './components/ProgressBarMusic';
 //import './App.css';
 
 class App extends Component {
@@ -17,6 +19,7 @@ class App extends Component {
                     <Route path="/footer"> <Footer /></Route>
                     <Route path="/more"> <More /> </Route>
                     <Route path="/playlist"> <Playlist/> </Route>
+                    <Route path="/progress"> <ProgressBarMusic/> </Route>
 
                 </Switch>
             </div>
