@@ -12,8 +12,8 @@ const initState={
     {id:10, title:"Who Will Survive in America", author:"Kayne West", time:191},
     {id:11, title:"Dark Fantasy", author:"Kayne West", time:231},
   ],
-  actualSong : [],
-  nextSong : [],
+  actualSong : 1,
+  nextSong : 5,
   songStatus : [],
   playMode : []
 }

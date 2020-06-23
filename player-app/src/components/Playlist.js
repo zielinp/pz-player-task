@@ -13,7 +13,7 @@ import '../css/playlist.css'
 
 
 
-function secondsToMinutes(time){
+ export function secondsToMinutes(time){
   let minutes = Math.floor(time/60);
   let seconds = time - minutes * 60;
   let result = `${minutes}:${seconds}`
@@ -31,7 +31,7 @@ class Playlist extends Component {
 
   let songs = this.props.songs.map(song => {
     return(
-      <li className="songsListElement container" key={song.id}>
+      <li className="songsListElement" key={song.id}>
 
         <span>
         <span  className="songNumber">{song.id}.</span><span>{song.title}</span>
