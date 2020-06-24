@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "46129794b546549a811ee25aca74441f",
+    "revision": "aff18423cc4d2f6a13e237bda199ffc3",
     "url": "/pz-player-task/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/pz-player-task/static/css/2.5f2be707.chunk.css"
   },
   {
-    "revision": "170a57357d424e015746",
-    "url": "/pz-player-task/static/css/main.13092a66.chunk.css"
+    "revision": "6c951afe72866dbe6916",
+    "url": "/pz-player-task/static/css/main.abd7c54c.chunk.css"
   },
   {
     "revision": "8d4ec1551629c912a8f1",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/pz-player-task/static/js/2.24209b7b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "170a57357d424e015746",
-    "url": "/pz-player-task/static/js/main.4fdff5f9.chunk.js"
+    "revision": "6c951afe72866dbe6916",
+    "url": "/pz-player-task/static/js/main.ec0c3ff9.chunk.js"
   },
   {
     "revision": "22bb548ef1177522c6d9",
