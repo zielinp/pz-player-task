@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/pz-player-task/static/css/main.13092a66.chunk.css",
+    "main.js": "/pz-player-task/static/js/main.4fdff5f9.chunk.js",
+    "main.js.map": "/pz-player-task/static/js/main.4fdff5f9.chunk.js.map",
+    "runtime-main.js": "/pz-player-task/static/js/runtime-main.d79e1249.js",
+    "runtime-main.js.map": "/pz-player-task/static/js/runtime-main.d79e1249.js.map",
+    "static/css/2.5f2be707.chunk.css": "/pz-player-task/static/css/2.5f2be707.chunk.css",
+    "static/js/2.24209b7b.chunk.js": "/pz-player-task/static/js/2.24209b7b.chunk.js",
+    "static/js/2.24209b7b.chunk.js.map": "/pz-player-task/static/js/2.24209b7b.chunk.js.map",
+    "index.html": "/pz-player-task/index.html",
+    "precache-manifest.536d9cabdd0af19951d78daa9cc9e442.js": "/pz-player-task/precache-manifest.536d9cabdd0af19951d78daa9cc9e442.js",
+    "service-worker.js": "/pz-player-task/service-worker.js",
+    "static/css/2.5f2be707.chunk.css.map": "/pz-player-task/static/css/2.5f2be707.chunk.css.map",
+    "static/css/main.13092a66.chunk.css.map": "/pz-player-task/static/css/main.13092a66.chunk.css.map",
+    "static/js/2.24209b7b.chunk.js.LICENSE.txt": "/pz-player-task/static/js/2.24209b7b.chunk.js.LICENSE.txt",
+    "static/media/Play_active.png": "/pz-player-task/static/media/Play_active.d522478d.png",
+    "static/media/back_ico.svg": "/pz-player-task/static/media/back_ico.6d8b1009.svg",
+    "static/media/main.css": "/pz-player-task/static/media/bg_image.52d51b7d.jpg",
+    "static/media/cover-1.png": "/pz-player-task/static/media/cover-1.8e344a79.png",
+    "static/media/cover.png": "/pz-player-task/static/media/cover.aa246fdc.png",
+    "static/media/hide_ico.svg": "/pz-player-task/static/media/hide_ico.efd35a48.svg",
+    "static/media/more_ico.svg": "/pz-player-task/static/media/more_ico.68d542b2.svg",
+    "static/media/next_ico.svg": "/pz-player-task/static/media/next_ico.908e77ad.svg",
+    "static/media/playlist_ico.svg": "/pz-player-task/static/media/playlist_ico.d560ea63.svg",
+    "static/media/previous_ico.svg": "/pz-player-task/static/media/previous_ico.61530e1d.svg",
+    "static/media/repeat_ico.svg": "/pz-player-task/static/media/repeat_ico.f24e6532.svg",
+    "static/media/shuffle_ico.svg": "/pz-player-task/static/media/shuffle_ico.9cca0f11.svg",
+    "static/media/slick-theme.css": "/pz-player-task/static/media/slick.f97e3bbf.svg",
+    "static/media/unreleased_cover.png": "/pz-player-task/static/media/unreleased_cover.a2195768.png",
+    "static/media/usertive_logo.svg": "/pz-player-task/static/media/usertive_logo.2bd484f6.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d79e1249.js",
+    "static/css/2.5f2be707.chunk.css",
+    "static/js/2.24209b7b.chunk.js",
+    "static/css/main.13092a66.chunk.css",
+    "static/js/main.4fdff5f9.chunk.js"
+  ]
+}
