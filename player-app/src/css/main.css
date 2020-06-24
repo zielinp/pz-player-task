@@ -121,9 +121,11 @@
   z-index: 2;
 }
 .shuffleIcon:hover{
-  opacity: .5;
+   transform: scale(1.2,1.2);
 }
-
+.repeatIcon:hover{
+   transform: scale(1.2,1.2);
+}
 .repeatIcon {
   width: 26px;
   height: 26px;
@@ -133,10 +135,10 @@
   z-index: 2;
 }
 
-.playIcon {
+/* .playIcon {
   position: absolute;
   left: 206px;
   top: 635px;
   width: 164px;
   height: 164px;
-}
+} */

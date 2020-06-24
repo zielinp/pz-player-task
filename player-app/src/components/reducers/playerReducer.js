@@ -56,7 +56,7 @@ const playerReducer = (state = initState, action) =>{
     let temp_nextSong;
 
     if(state.playMode === "ORDERED"){
-      temp_nextSong = state.actualSong+1;
+      temp_nextSong = state.nextSong+1;
       if(temp_nextSong > 11){
         temp_nextSong = 1;
       }

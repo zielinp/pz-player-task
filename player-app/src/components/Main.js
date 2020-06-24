@@ -41,13 +41,16 @@ class Main extends Component {
 
     let next_song = this.props.songs.find(song => song.id === this.props.next_Song);
     let prev_song =this.props.songs.find(song => song.id === (this.props.prev_Song));
+    let loopedButtonOpacity = (this.props.playMode === 'LOOPED' )? 1 : 0.5;
+    let randomButtonOpacity = (this.props.playMode === 'RANDOM' )? 1 : 0.5;
+
 
     return(
       <div className="mainPage">
         <div className="top">
             <div className="topContent">
               <div className="mainHeader">
-                  <Link to="/"><img className="backIcon" src={BackIcon} alt=""/></Link>
+                  <Link to="/pz-player-task"><img className="backIcon" src={BackIcon} alt=""/></Link>
                   <div className="headerText">
                     <p className="album">ALBUM</p>
                     <p className="albumTitle">Unreleased</p>
@@ -73,8 +76,8 @@ class Main extends Component {
 
 
         <div className="playbackButtons">
-          <img onClick={this.handleRandom} className="shuffleIcon" src={ShuffleIcon} alt=""/>
-          <img onClick={this.handleLooped} className="repeatIcon" src={RepeatIcon} alt=""/>
+          <img style={{ opacity:  `${randomButtonOpacity}` }}onClick={this.handleRandom} className="shuffleIcon" src={ShuffleIcon} alt=""/>
+          <img style={{ opacity:  `${loopedButtonOpacity}` }} onClick={this.handleLooped} className="repeatIcon" src={RepeatIcon} alt=""/>
         </div>
 
 

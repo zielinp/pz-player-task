@@ -16,6 +16,14 @@
   z-index: 2;
 }
 
+.nextIconArrow:hover{
+   transform: scale(1.2,1.2);
+}
+
+.prevIconArrow:hover{
+   transform: scale(1.2,1.2);
+}
+
 .slides {
   width: 320px;
   height: 320px;

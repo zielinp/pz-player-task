@@ -53,9 +53,14 @@
   width: 164px;
   height: 164px;
 }
-
+.playIconImg:hover{
+   transform: scale(1.5,1.5);
+}
 .pauseIconImg {
   object-fit: fill;
   width: 164px;
   height: 164px;
+}
+.pauseIconImg:hover{
+   transform: scale(0.75,0.75);
 }

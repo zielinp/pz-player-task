@@ -71,7 +71,7 @@ class ProgressBarMusic extends React.Component {
   }
 
   resetTimer() {
-    this.setState({time: 0, isOn: true})
+    this.setState({time: 0, isOn: this.state.isOn})
   }
 
   handlePlay = () => {
@@ -87,7 +87,7 @@ class ProgressBarMusic extends React.Component {
   }
 
   render() {
-    
+
 
     let actual_song = this.props.songs.find(song => song.id === this.props.actualSong)
 
@@ -100,6 +100,7 @@ class ProgressBarMusic extends React.Component {
       <button className="playPauseIcon" onClick={this.stopTimer}>
         <img className="pauseIconImg" src={PlayInactive} alt=""/>
       </button>
+
 
     return (
         <div className = "timeProgressBar">

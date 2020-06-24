@@ -18,7 +18,7 @@ class More extends Component {
       <div>
       <div className="morePage">
         <div className="moreHeader">
-            <Link to="/"><img className="backIcon" src={BackIcon} alt=""/></Link>
+            <Link to="/pz-player-task"><img className="backIcon" src={BackIcon} alt=""/></Link>
             <div className="headerText">
               <p className="album">ALBUM</p>
               <p className="albumTitle">Unreleased</p>

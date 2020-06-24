@@ -59,7 +59,7 @@ class Playlist extends Component {
           <div className="headerContent container">
 
             <div className="headerLeft">
-              <Link to="/"><img className="backIcon" src={BackIcon} alt=""/></Link>
+              <Link to="/pz-player-task"><img className="backIcon" src={BackIcon} alt=""/></Link>
             <div className="headerLeftText">
               <p className="title">{actual_song.title}</p>
               <p className="author">{actual_song.author}</p>
@@ -78,8 +78,8 @@ class Playlist extends Component {
 
 
           <div className="bottom container">
-            <Link to="/"><button className="shuffleButton" onClick={()=>{this.handleShuffle()}}>SHUFFLE PLAY</button></Link>
-            <Link to="/"><img className="hideIcon" src={HideIcon} alt=""/></Link>
+            <Link to="/pz-player-task"><button className="shuffleButton" onClick={()=>{this.handleShuffle()}}>SHUFFLE PLAY</button></Link>
+            <Link to="/pz-player-task"><img className="hideIcon" src={HideIcon} alt=""/></Link>
           </div>
 
       </div>
