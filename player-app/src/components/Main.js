@@ -13,6 +13,8 @@ import ShuffleIcon from '../images/shuffle_ico.svg'
 import RepeatIcon from '../images/repeat_ico.svg'
 import PlayActive from '../images/Play_active.png'
 import PlayInactive from '../images/Play_inactive.png'
+import BrandLogo from '../images/usertive_logo.svg'
+
 
 import SimpleSlider from './SimpleSlider';
 import ProgressBarMusic from './ProgressBarMusic';
@@ -30,6 +32,12 @@ class Main extends Component {
 
   render() {
 
+    let next_song = this.props.songs.find(song => song.id === this.props.next_Song);
+    let prev_song =this.props.songs.find(song => song.id === (this.props.prev_Song));
+
+
+
+
     return(
       <div className="mainPage">
         <div className="top">
@@ -42,19 +50,26 @@ class Main extends Component {
                   </div>
                   <Link to="/more"><img className="moreIcon" src={MoreIcon} alt=""/></Link>
               </div>
-
             </div>
         </div>
 
+        <div className="brandLogo">
+          <img className="brandLogoImg" src={BrandLogo}/>
+        </div>
+
+        <div className="addicionalSliderImages">
+          <img className="addPrevSong" src={prev_song.img}/>
+          <img className="addNextSong" src={next_song.img}/>
+        </div>
+
+
         <div className="slider">
             <SimpleSlider />
-
         </div>
 
 
         <div className="playbackButtons">
           <img className="shuffleIcon" src={ShuffleIcon} alt=""/>
-        
           <img className="repeatIcon" src={RepeatIcon} alt=""/>
         </div>
 
@@ -62,6 +77,7 @@ class Main extends Component {
         <div className="progessBar"><ProgressBarMusic/></div>
         <div className="fourier"></div>
         <Footer />
+
       </div>
     )
   }
@@ -70,7 +86,10 @@ class Main extends Component {
 const mapStateToProps = (state)=>{
     return{
       songStatus : state.songStatus,
-      playMode : state.playMode
+      playMode : state.playMode,
+      songs: state.songs,
+      next_Song: state.nextSong,
+      prev_Song: state.prevSong
     }
 }
 

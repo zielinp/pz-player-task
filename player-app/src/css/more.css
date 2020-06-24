@@ -1,0 +1,77 @@
+.morePage{
+  position: absolute;
+  top:0;
+  width: 100%;
+  background-color: #1f1a37;
+  height: 935px;
+}
+
+.moreHeader{
+  margin-top: 45px;
+  border: 1px solid white;
+  display: flex;
+  justify-content: space-around;
+  /* Do sprawdzenia marignesy */
+  align-items: center;
+}
+
+.moreIcon{
+    height: 29px;
+}
+
+.headerText{
+/* border: 1px solid white; */
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.album{
+  font-size: 18px;
+  color: #6f729c;
+  /* font-family: "Gilroy"; */
+  font-weight: 300;
+  text-align: center;
+  margin:0;
+  padding: 0;
+}
+
+.albumTitle{
+font-size: 24px;
+/* line-height: 36px; */
+color: #ffffff;
+/* font-family: "Gilroy"; */
+font-weight: 300;
+margin:0;
+padding: 0;
+}
+
+.moreSongInfo{
+  margin-top: 100px;
+  border: 1px solid pink;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.moreSongInfoImg{
+  border: 1px solid white;
+  width: 192px;
+  height: 192px;
+  background-size: cover;
+  margin: auto;
+}
+
+
+
+.morePageContentLinks{
+
+  border: 1px solid white;
+  font-size: 24px;
+line-height: 40px;
+color: #ffffff;
+/* font-family: "Gilroy"; */
+font-weight: 300;
+text-align: center;
+}

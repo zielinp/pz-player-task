@@ -32,7 +32,6 @@ const playerReducer = (state = initState, action) =>{
   if(action.type === SHUFFLE_SONG){
 
     let rand_song_id = Math.floor(Math.random() * 11) + 1;
-    // let rand_song = state.songs.find(song => song.id === rand_song_id);
     let next_song_id = rand_song_id+1;
 
     if(rand_song_id == 11){
@@ -47,11 +46,6 @@ const playerReducer = (state = initState, action) =>{
 
             }
   }
-
-
-
-
-
 
   if(action.type === PLAY_SONG){}
   if(action.type === PAUSED_SONG){}
@@ -83,16 +77,8 @@ const playerReducer = (state = initState, action) =>{
       prevSong: temp_prevSong,
       actualSong: state.prevSong,
       nextSong: state.actualSong,
-
             }
   }
-
-
-
-
-
-
-
   return state;
 }
 

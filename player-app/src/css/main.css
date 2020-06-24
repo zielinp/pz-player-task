@@ -17,6 +17,7 @@
   background-color: #1f1a37;
   opacity: 0.85;
 }
+
 .mainPage{
   background-color: #1f1a37;
   height: 935px;
@@ -61,10 +62,57 @@ padding: 0;
 
 }
 
+.brandLogoImg{
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+
+}
+
+.brandLogo{
+  position: absolute;
+  background-color: #1f1a37;
+  top:280px;
+  left: 245px;
+  z-index: 2;
+  border: 5px solid #755dd5;
+  width: 72px;
+  height: 72px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.addPrevSong, .addNextSong{
+  width: 130px;
+  height: 130px;
+  background-size: cover;
+
+}
+.addicionalSliderImages{
+ position: absolute;
+  margin-top: -60px;
+}
+.addPrevSong{
+  position: absolute;
+  margin-left: -65px;
+}
+.addNextSong{
+  position: absolute;
+  margin-left: 511px;
+}
+
+
+
+
+
+
 
 
 .slider{
-  /* border: 5px solid yellow; */
   width: 100%;
   margin-top: -160px;
 }

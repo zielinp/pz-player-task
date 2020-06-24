@@ -39,7 +39,8 @@ class ProgressBarMusic extends React.Component {
     this.timer = setInterval(() => this.setState({
 
       time: Date.now() - this.state.start
-    }), 1000);
+
+    } ), 1000);
   }
   stopTimer() {
     this.setState({isOn: false})
