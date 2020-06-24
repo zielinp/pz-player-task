@@ -1,17 +1,16 @@
-.header{
+.header {
   background-image: url('../images/bg_image.jpg');
   position: relative;
-  /* height: 13%; */
   width: 100%;
   height: 131px;
   overflow: hidden;
 }
 
-.headerContent{
+.headerContent {
   position: absolute;
-  top:0;
-  left:0;
-  width:100%;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
   background-color: #1f1a37;
   opacity: 0.85;
@@ -19,57 +18,59 @@
   justify-content: space-between;
 }
 
-.headerLeft{
+.headerLeft {
   display: flex;
   align-items: center;
   margin-left: 60px;
 }
-.headerLeftText{
-    margin-left: 60px;
+
+.headerLeftText {
+  margin-left: 60px;
 }
 
-.headerRight{
+.headerRight {
   display: flex;
   align-items: center;
   margin-right: 60px;
 }
-.title{
+
+.title {
   font-size: 20px;
   color: white;
   font-weight: bold;
   opacity: 1;
   padding: 0;
-  margin:0;
+  margin: 0;
 }
 
-.author{
+.author {
   color: #6f729c;
   font-size: 18px;
   text-transform: uppercase;
   opacity: 1;
   padding: 0;
-  margin:0;
-
+  margin: 0;
 }
 
-.backIcon{
+.backIcon {
   height: 30px;
 }
 
-.playIcon{
+.playIconPlaylist {
   height: 70px;
+  width: 70px;
 }
 
-.songsList{
+.songsList {
   position: relative;
   margin-top: 10px;
   margin-left: 65px;
   margin-right: 65px;
-  width:auto;
+  width: auto;
   top: 13%;
   padding: 0;
-
 }
+
 .songsList:after {
   position: absolute;
   bottom: 0;
@@ -77,13 +78,12 @@
   width: 100%;
   content: "";
   background: linear-gradient(to top,
-     rgba(255,255,255, 1) 2%,
-     rgba(255,255,255, 0) 60%
-  );
-  pointr-events: none; /* so the text is still selectable */
+      rgba(255, 255, 255, 1) 2%,
+      rgba(255, 255, 255, 0) 60%);
+  pointr-events: none;
 }
 
-.songsListElement{
+.songsListElement {
   display: flex;
   justify-content: space-between;
   font-size: 24px;
@@ -91,10 +91,11 @@
   color: #1b1b1b;
   font-weight: 300;
   padding: 0;
-  margin: 0; /* font-family: "Gilroy"; */
+  margin: 0;
+  /* font-family: "Gilroy"; */
 }
 
-.songNumber{
+.songNumber {
   font-size: 18px;
   line-height: 64px;
   color: #6f729c;
@@ -103,7 +104,7 @@
   margin-right: 30px;
 }
 
-.dots{
+.dots {
   display: flex;
   flex-grow: 2;
   border-bottom: 3px dotted #6f729c;
@@ -114,14 +115,14 @@
   margin-right: 10px;
 }
 
-.bottom{
+.bottom {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
 }
 
-.shuffleButton{
+.shuffleButton {
   width: 448px;
   height: 59px;
   border-radius: 30px;
@@ -133,9 +134,9 @@
   margin-bottom: 30px;
 }
 
-.hideIcon{
-width: 29px;
-height: 16px;
-border-radius: 13px;
+.hideIcon {
+  width: 29px;
+  height: 16px;
+  border-radius: 13px;
   margin-bottom: 30px;
 }

@@ -36,6 +36,9 @@ class Playlist extends Component {
 
   render() {
 
+    let actual_song = this.props.songs.find(song => song.id === this.props.actualSong);
+
+
   let songs = this.props.songs.map(song => {
     return(
       <li className="songsListElement" key={song.id}>
@@ -58,13 +61,13 @@ class Playlist extends Component {
             <div className="headerLeft">
               <Link to="/"><img className="backIcon" src={BackIcon} alt=""/></Link>
             <div className="headerLeftText">
-              <p className="title">Self Conscious</p>
-              <p className="author">Kayne West</p>
+              <p className="title">{actual_song.title}</p>
+              <p className="author">{actual_song.author}</p>
             </div>
 
             </div>
             <div className="headerRight">
-              <img className="playIcon" src={PlayActive} alt=""/>
+              <img className="playIconPlaylist" src={PlayActive} alt=""/>
             </div>
           </div>
         </div>
@@ -87,7 +90,8 @@ class Playlist extends Component {
   }
   const mapStateToProps = (state)=>{
       return{
-          songs: state.songs
+          songs: state.songs,
+          actualSong: state.actualSong,
       }
 }
 

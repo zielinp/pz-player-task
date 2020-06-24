@@ -11,7 +11,6 @@ import PlaylistIcon from '../images/playlist_ico.svg'
 
 
 
-
 class Footer extends Component {
   render() {
 
@@ -33,7 +32,6 @@ class Footer extends Component {
 
   )
 }
-
 }
 
 const mapStateToProps = (state)=>{

@@ -1,12 +1,8 @@
-.timeProgressBar
-{
+.timeProgressBar {
   position: absolute;
   bottom: 194px;
   width: 100%;
-
 }
-
-
 
 .progress-bar {
   position: relative;
@@ -18,50 +14,47 @@
 }
 
 .filler {
-  /* border: 2px solid black; */
   position: relative;
-  top:-2px;
+  top: -2px;
   background: #00c9b7;
   height: 5px;
   border-radius: inherit;
   transition: width 1.s ease-in;
 }
 
-
 /* Do poprawienia */
-.timeProgress{
+.timeProgress {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 0 50px 0 50px;
 }
-.playPauseIcon{
+
+.playPauseIcon {
   background: none;
   width: 164px;
   height: 164px;
   border: none;
   display: flex;
   justify-content: center;
-  margin-left:206px;
-
-
+  margin-left: 206px;
 }
-.leftTime,.fullTime{
+
+.leftTime, .fullTime {
   font-size: 18px;
   line-height: 36px;
   color: #6f729c;
   /* font-family: "Gilroy"; */
   font-weight: 300;
-
-
-
 }
-.playIconImg{
+
+.playIconImg {
   object-fit: fill;
   width: 164px;
   height: 164px;
 }
-.pauseIconImg{
+
+.pauseIconImg {
   object-fit: fill;
   width: 164px;
   height: 164px;

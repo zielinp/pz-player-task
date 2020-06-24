@@ -1,78 +1,75 @@
-.top{
+.top {
   background-image: url('../images/bg_image.jpg');
   position: relative;
   width: 100%;
   height: 320px;
   overflow: hidden;
-  background-size:cover;
-
+  background-size: cover;
 }
 
-.topContent{
+.topContent {
   position: absolute;
-  top:0;
-  left:0;
-  width:100%;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
   background-color: #1f1a37;
   opacity: 0.85;
 }
 
-.mainPage{
+.mainPage {
   background-color: #1f1a37;
   height: 935px;
 }
 
-.mainHeader{
+.mainHeader {
   margin-top: 45px;
-  border: 1px solid white;
   display: flex;
   justify-content: space-around;
   /* Do sprawdzenia marignesy */
   align-items: center;
 }
-.moreIcon{
-    height: 29px;
-}
-.headerText{
-/* border: 1px solid white; */
-display: flex;
-flex-direction: column;
-align-items: center;
 
+.moreIcon {
+  height: 29px;
 }
-.album{
+
+.headerText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.album {
   font-size: 18px;
-
-color: #6f729c;
-/* font-family: "Gilroy"; */
-font-weight: 300;
-text-align: center;
-margin:0;
-padding: 0;
-}
-.albumTitle{
-font-size: 24px;
-/* line-height: 36px; */
-color: #ffffff;
-/* font-family: "Gilroy"; */
-font-weight: 300;
-margin:0;
-padding: 0;
-
+  color: #6f729c;
+  /* font-family: "Gilroy"; */
+  font-weight: 300;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
-.brandLogoImg{
+.albumTitle {
+  font-size: 24px;
+  /* line-height: 36px; */
+  color: #ffffff;
+  /* font-family: "Gilroy"; */
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+
+.brandLogoImg {
   width: 30px;
   height: 30px;
   background-size: cover;
-
 }
 
-.brandLogo{
+.brandLogo {
   position: absolute;
   background-color: #1f1a37;
-  top:280px;
+  top: 280px;
   left: 245px;
   z-index: 2;
   border: 5px solid #755dd5;
@@ -82,62 +79,63 @@ padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
-
-.addPrevSong, .addNextSong{
+.addPrevSong, .addNextSong {
   width: 130px;
   height: 130px;
   background-size: cover;
-
 }
-.addicionalSliderImages{
- position: absolute;
+
+.addicionalSliderImages {
+  position: absolute;
   margin-top: -60px;
+  
+  width: 100%;
 }
-.addPrevSong{
+
+.addPrevSong {
   position: absolute;
-  margin-left: -65px;
+  object-fit: cover;
+  width: 65px;
+  object-position: 100% 0;
 }
-.addNextSong{
+
+.addNextSong {
   position: absolute;
-  margin-left: 511px;
+  object-fit: cover;
+  width: 65px;
+  object-position: 0 0;
+  /* margin-left: 511px; */
+  /* left: 511px; */
+  right: 0;
 }
 
-
-
-
-
-
-
-
-.slider{
+.slider {
   width: 100%;
   margin-top: -160px;
 }
 
-
-
-.shuffleIcon{
+.shuffleIcon {
   position: absolute;
   width: 26px;
   height: 26px;
   left: 50px;
-  top:710px;
+  top: 710px;
 }
 
-.repeatIcon{
+.repeatIcon {
   width: 26px;
   height: 26px;
   position: absolute;
   right: 50px;
-  top:710px;
+  top: 710px;
 }
-.playIcon{
+
+.playIcon {
   position: absolute;
   left: 206px;
-  top:635px;
+  top: 635px;
   width: 164px;
   height: 164px;
 }
