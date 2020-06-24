@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import Footer from './Footer';
 
-import { playSong, pausedSong } from './actions/playerActions'
+import { playSong, pausedSong, setRandomMode, setLoopedMode } from './actions/playerActions'
 
 import '../css/main.css'
 
@@ -25,18 +25,22 @@ class Main extends Component {
         this.props.playSong();
     }
 
-    handlePaused = ()=>{
-          this.props.pausedSong();
+  handlePaused = ()=>{
+        this.props.pausedSong();
+    }
+
+  handleLooped = ()=>{
+        this.props.setLoopedMode();
       }
 
+  handleRandom= () => {
+      this.props.setRandomMode();
+}
 
   render() {
 
     let next_song = this.props.songs.find(song => song.id === this.props.next_Song);
     let prev_song =this.props.songs.find(song => song.id === (this.props.prev_Song));
-
-
-
 
     return(
       <div className="mainPage">
@@ -69,8 +73,8 @@ class Main extends Component {
 
 
         <div className="playbackButtons">
-          <img className="shuffleIcon" src={ShuffleIcon} alt=""/>
-          <img className="repeatIcon" src={RepeatIcon} alt=""/>
+          <img onClick={this.handleRandom} className="shuffleIcon" src={ShuffleIcon} alt=""/>
+          <img onClick={this.handleLooped} className="repeatIcon" src={RepeatIcon} alt=""/>
         </div>
 
 
@@ -96,7 +100,9 @@ const mapStateToProps = (state)=>{
 const mapDispatchToProps = (dispatch)=>{
   return{
       playSong: ()=>{dispatch(playSong())},
-      pausedSong: ()=>{dispatch(pausedSong())}
+      pausedSong: ()=>{dispatch(pausedSong())},
+      setLoopedMode: ()=>{dispatch(setLoopedMode())},
+      setRandomMode: ()=>{dispatch(setRandomMode())},
   }
 }
 

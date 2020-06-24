@@ -10,22 +10,30 @@
 * [Contact](#contact)
 
 ## General info
-Project created as part of learning the basics of React and Redux.
+Simulator of mobile player app with three different views: main player, playlist and detail info about song.
 
 ## Demo
-Set resolution to 576 x 1024
+Note: Page is not fully responsive yet. Please set resolution to 576px x 1024px to see desired output
 https://zielinp.github.io/pz-player-task/
 
 ## Technologies
 * React
 * Redux
+* Slick.js
 
 ## Features
 List of features ready and TODOs for future development
-*
+* three playmodes: ordered, looped and random
+* visualisation of song play time
+* dynamically generated info about next song in footer
+* automatically changing songs
+* button to choose random song from playlist
 
 To-do list:
-- [ ] 
+- [ ] make some components responsive
+- [ ] music wave visualisation 
+- [ ] song playtime globally stored in Redux store
+- [ ] button animations and state changed styling
 
 ## Status
 Project is: _in progress_

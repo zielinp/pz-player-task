@@ -1,4 +1,4 @@
-import { SHUFFLE_SONG,PLAY_SONG,PAUSED_SONG, NEXT_SONG, PREV_SONG } from './action-types/player-actions.js'
+import { SHUFFLE_SONG,PLAY_SONG,PAUSED_SONG, NEXT_SONG, PREV_SONG, SET_LOOPED_MODE, SET_RANDOM_MODE} from './action-types/player-actions.js'
 
 export const shuffleSong = (id) => {
   return {
@@ -31,6 +31,20 @@ export const nextSong = (id) => {
 export const prevSong = (id) => {
   return {
     type: PREV_SONG,
+    id
+  }
+}
+
+export const setLoopedMode = (id) => {
+  return {
+    type: SET_LOOPED_MODE,
+    id
+  }
+}
+
+export const setRandomMode = (id) => {
+  return {
+    type: SET_RANDOM_MODE,
     id
   }
 }

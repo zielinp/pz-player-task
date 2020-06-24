@@ -19,37 +19,60 @@ class ProgressBarMusic extends React.Component {
     this.state = {
       time: this.props.actualTime,
       isOn:false,
-      start:0
+      start:0,
+
     }
 
 
     this.startTimer = this.startTimer.bind(this)
     this.stopTimer = this.stopTimer.bind(this)
     this.resetTimer = this.resetTimer.bind(this)
+    this.upadteTimer = this.updateTimer.bind(this)
   }
 
+  componentDidUpdate(prevProps, prevState) {
+ if (prevProps.actualSong !== this.props.actualSong) {
+   this.resetTimer();
+
+ }
+ let actual_song = this.props.songs.find(song => song.id === this.props.actualSong)
+
+ if(this.state.time === actual_song.time) {
+
+  this.resetTimer();
+  this.handleNext();
+ }
+
+
+}
+
+  updateTimer() {
+    this.setState({
+      time: this.state.time + 1
+    })
+}
 
   startTimer() {
+    clearInterval(this.timer);
     this.setState({
       isOn: true,
       time: this.state.time,
-      start: Date.now() - this.state.time
+      start:  this.state.time
     })
 
     this.timer = setInterval(() => this.setState({
-
-      time: Date.now() - this.state.start
-
-    } ), 1000);
+      time:  this.state.time +1})
+      ,1000);
   }
+
   stopTimer() {
     this.setState({isOn: false})
     clearInterval(this.timer)
   }
-  resetTimer() {
-    this.setState({time: 0, isOn: false})
-  }
 
+  resetTimer() {
+    this.setState({time: 0, isOn: true})
+  }
 
   handlePlay = () => {
     this.props.playSong();
@@ -58,16 +81,15 @@ class ProgressBarMusic extends React.Component {
   handlePaused = () => {
     this.props.pausedSong();
   }
+
   handleNext = () => {
     this.props.nextSong();
   }
 
-
   render() {
-
+    
 
     let actual_song = this.props.songs.find(song => song.id === this.props.actualSong)
-
 
     let start = (this.state.time == 0 || !this.state.isOn) ?
       <button className="playPauseIcon" onClick={this.startTimer}>
@@ -78,37 +100,15 @@ class ProgressBarMusic extends React.Component {
       <button className="playPauseIcon" onClick={this.stopTimer}>
         <img className="pauseIconImg" src={PlayInactive} alt=""/>
       </button>
-      // let resume = (this.state.time == 0 || this.state.isOn) ?
-      // null :
-      // <button onClick={this.startTimer}>resume</button>
-      // let reset = (this.state.time == 0 || this.state.isOn) ?
-      // null :
-      // <button onClick={this.resetTimer}>reset</button>
 
-
-
-     var zmienna =Math.floor((this.state.time)/1000);
-
-//      if(zmienna ===3 ){
-// this.resetTimer();
-//        zmienna=0;
-//
-//
-//        this.handleNext();
-//
-//
-//
-//
-//      }
     return (
         <div className = "timeProgressBar">
 
         <div>{start}{stop}</div>
 
-
         <div className="timeProgress">
-        <div className="leftTime">{secondsToMinutes(actual_song.time-zmienna)}</div>
-        <ProgressBar zmienna={(zmienna/actual_song.time)*100} />
+        <div className="leftTime">{secondsToMinutes(actual_song.time-this.state.time)}</div>
+        <ProgressBar width={(this.state.time/actual_song.time)*100} />
         <div className="fullTime">{secondsToMinutes(actual_song.time)}</div>
         </div>
 
@@ -120,13 +120,13 @@ class ProgressBarMusic extends React.Component {
 const ProgressBar = (props) => {
   return (
       <div className="progress-bar">
-        <Filler zmienna={props.zmienna} />
+        <Filler width={props.width} />
       </div>
     )
 }
 
 const Filler = (props) => {
-  return <div className="filler" style={{ width: `${props.zmienna}%` }} />
+  return <div className="filler" style={{ width: `${props.width}%` }} />
 }
 
 const mapStateToProps = (state)=>{
@@ -135,7 +135,6 @@ const mapStateToProps = (state)=>{
       actualSong: state.actualSong,
       songStatus : state.songStatus,
       actualTime: state.actualTime,
-
     }
 }
 

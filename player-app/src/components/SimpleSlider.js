@@ -17,10 +17,7 @@ import NextArrow from './NextArrow'
 import PrevArrow from './PrevArrow'
 
 
-
 class SimpleSlider extends React.Component {
-
-
 
   render() {
 

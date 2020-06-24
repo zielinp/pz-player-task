@@ -26,7 +26,6 @@
   margin-top: 45px;
   display: flex;
   justify-content: space-around;
-  /* Do sprawdzenia marignesy */
   align-items: center;
 }
 
@@ -90,7 +89,6 @@
 .addicionalSliderImages {
   position: absolute;
   margin-top: -60px;
-  
   width: 100%;
 }
 
@@ -106,8 +104,6 @@
   object-fit: cover;
   width: 65px;
   object-position: 0 0;
-  /* margin-left: 511px; */
-  /* left: 511px; */
   right: 0;
 }
 
@@ -122,6 +118,10 @@
   height: 26px;
   left: 50px;
   top: 710px;
+  z-index: 2;
+}
+.shuffleIcon:hover{
+  opacity: .5;
 }
 
 .repeatIcon {
@@ -130,6 +130,7 @@
   position: absolute;
   right: 50px;
   top: 710px;
+  z-index: 2;
 }
 
 .playIcon {

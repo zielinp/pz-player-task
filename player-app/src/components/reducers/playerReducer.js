@@ -1,7 +1,7 @@
 import Album1 from '../../images/unreleased_cover.png'
 import Album2 from '../../images/cover.png'
 import Album3 from '../../images/cover-1.png'
-import { SHUFFLE_SONG,PLAY_SONG,PAUSED_SONG, NEXT_SONG, PREV_SONG } from '../actions/action-types/player-actions'
+import { SHUFFLE_SONG,PLAY_SONG,PAUSED_SONG, NEXT_SONG, PREV_SONG, SET_LOOPED_MODE, SET_RANDOM_MODE, SET_ORDERED_MODE } from '../actions/action-types/player-actions'
 
 
 const initState={
@@ -23,7 +23,7 @@ const initState={
   prevSong : 11,
   actualTime:0,
   songStatus : [],
-  playMode : [],
+  playMode : 'ORDERED',
 
 }
 
@@ -43,26 +43,39 @@ const playerReducer = (state = initState, action) =>{
       prevSong: state.actualSong,
       actualSong: rand_song_id,
       nextSong: next_song_id,
-
             }
   }
 
-  if(action.type === PLAY_SONG){}
-  if(action.type === PAUSED_SONG){}
+  // TO DO (to get global info about actual state of song)
+  // if(action.type === PLAY_SONG){}
+  // if(action.type === PAUSED_SONG){}
+
 
   if(action.type === NEXT_SONG){
 
-    let temp_nextSong = state.nextSong+1;
-    if(temp_nextSong > 11){
-      temp_nextSong = 1;
+    let temp_nextSong;
+
+    if(state.playMode === "ORDERED"){
+      temp_nextSong = state.actualSong+1;
+      if(temp_nextSong > 11){
+        temp_nextSong = 1;
+      }
     }
+
+    else if(state.playMode === "LOOPED"){
+      temp_nextSong = state.actualSong;
+    }
+
+    else if(state.playMode === "RANDOM"){
+      temp_nextSong = Math.floor(Math.random() * 11) + 1;
+    }
+
 
     return{
       ...state,
       prevSong: state.actualSong,
       actualSong: state.nextSong,
       nextSong: temp_nextSong,
-
             }
   }
 
@@ -79,6 +92,40 @@ const playerReducer = (state = initState, action) =>{
       nextSong: state.actualSong,
             }
   }
+
+if(action.type === SET_LOOPED_MODE){
+  let temp_playMode;
+  if(state.playMode === 'LOOPED'){
+    temp_playMode = 'ORDERED'
+  }
+  else{
+    temp_playMode = 'LOOPED'
+  }
+
+  return{
+    ...state,
+      playMode : temp_playMode,
+      nextSong : state.actualSong
+          }
+}
+
+if(action.type === SET_RANDOM_MODE){
+  let temp_playMode;
+  if(state.playMode === 'RANDOM'){
+    temp_playMode = 'ORDERED'
+  }
+  else{
+    temp_playMode = 'RANDOM'
+  }
+
+
+  return{
+    ...state,
+      playMode : temp_playMode,
+      nextSong :  Math.floor(Math.random() * 11) + 1
+          }
+}
+
   return state;
 }
 
