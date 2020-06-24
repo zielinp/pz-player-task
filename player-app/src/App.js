@@ -15,11 +15,9 @@ class App extends Component {
        <BrowserRouter>
             <div className="App">
                 <Switch>
-                    <Route exact path="/"> <Main /></Route>
-                    <Route path="/footer"> <Footer /></Route>
+                    <Route path="/pz-player-task"> <Main /></Route>
                     <Route path="/more"> <More /> </Route>
                     <Route path="/playlist"> <Playlist/> </Route>
-                    <Route path="/progress"> <ProgressBarMusic/> </Route>
 
                 </Switch>
             </div>
